@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  cronosd:
+    container_name: cronosd
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: cronosd:latest
