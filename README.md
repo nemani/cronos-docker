@@ -2,5 +2,12 @@
 Dockerfile for running a cronos mainnet node 
 
 
-create ./cronos_data empty file before running docker-compose up or create a dockervolume and edit docker-compose with volume name
+# Volume for blockchain data 
+blockchain data >=~ 1TB, so we need to persist it in case our container goes down.
 
+You should:
+create ./cronos_data empty directory before running docker-compose up for the first time 
+
+OR 
+
+provide an already initilized .cronos from somewhere else 
