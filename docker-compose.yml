@@ -1,4 +1,4 @@
-version: "3"
+version: "3.9"
 
 services:
   cronosd:
@@ -7,3 +7,13 @@ services:
       context: .
       dockerfile: ./Dockerfile
     image: cronosd:latest
+    restart: always
+    volumes:
+      - cronos_data:/root/.cronos/
+
+volumes:
+  cronos_data:
+    driver_opts:
+      type: none
+      device: ${PWD}/cronos_data/
+      o: bind
